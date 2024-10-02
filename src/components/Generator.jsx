@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React from 'react'
 import SectionWrapper from './SectionWrapper'
+import Button from './Button';
 import { SCHEMES, WORKOUTS } from '../utils/nadeem';
 
 function Header({index, title, description}) {
@@ -15,11 +16,9 @@ function Header({index, title, description}) {
     );
 }
 
-const Generator = () => {
+const Generator = ({muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkOut}) => {
     const [showModal, setShowModal] = useState(false)
-    const [poison,setPoison] = useState('individual')
-    const [muscles, setMuscles] = useState([])
-    const [goal, setGoal] = useState('strength_power')
+
 
     function toggleModal() {
         setShowModal(!showModal)
@@ -89,7 +88,7 @@ const Generator = () => {
         </div>
 
         <Header index={'03'} title={'Become Juggernaut'} description={'Select your ultimate objective.'} />
-        <div className='grid grid-cols-3  gap-4'>
+        <div className='grid sm:grid-cols-3 grid-cols-1 gap-4'>
             {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
                 return (
                     <button onClick={() => {
@@ -101,6 +100,8 @@ const Generator = () => {
             })}
 
         </div>
+
+        <Button func={updateWorkOut} text={"Formulate"}></Button>
 
     </SectionWrapper>
   )
