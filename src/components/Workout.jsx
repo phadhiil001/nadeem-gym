@@ -4,7 +4,7 @@ import ExerciseCard from './ExerciseCard'
 
 const Workout = ({workout}) => {
   return (
-    <SectionWrapper header={'Welcome to'} title={['THE', 'DANGER', 'ZONE']}>
+    <SectionWrapper id={'workout'} header={'Welcome to'} title={['THE', 'DANGER', 'ZONE']}>
         <div className="flex flex-col gap-4">
             {workout.map((exercise, i) => {
                 return (

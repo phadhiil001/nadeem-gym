@@ -13,7 +13,9 @@ const Hero = () => {
         </div>
         <p className='text-sm md:text-base font-light'>I hereby acknowledge the possibility of achieving <span className='text-blue-400 font-medium'>incredible, unstoppable growth</span> and accept all associated risks of transforming into a local <span className='text-blue-400 font-medium'>colossus</span>, stricken with a profound case of mirror admiration syndrome, and encountering logistical challenges like doorway navigation.</p>
 
-        <Button text={"Accept & Begin"}></Button>
+        <Button func={() => {
+          window.location.href = '#generate'
+        }} text={"Accept & Begin"}></Button>
     </div>
   )
 }

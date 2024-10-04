@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import React from 'react'
 import SectionWrapper from './SectionWrapper'
 import Button from './Button';
 import { SCHEMES, WORKOUTS } from '../utils/nadeem';
@@ -48,7 +47,7 @@ const Generator = ({muscles, setMuscles, poison, setPoison, goal, setGoal, updat
     }
 
   return (
-    <SectionWrapper header={"Generate your Workout"} title={['It\'s', 'Huge', 'o\'clock']}>
+    <SectionWrapper id={'generate'} header={"Generate your Workout"} title={['It\'s', 'Huge', 'o\'clock']}>
         <Header index={'01'} title={'Pick your poison'} description={'Select the workout you want to enjoy.'} />
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
             {Object.keys(WORKOUTS).map((type, typeIndex) => {

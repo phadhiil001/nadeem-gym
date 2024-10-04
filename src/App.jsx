@@ -16,8 +16,9 @@ function App() {
     }
 
     let newWorkout = generateWorkout({poison, muscles, goal})
-    console.log(newWorkout);
     setworkout(newWorkout)
+
+    window.location.href ='#workout'
   }
 
   return (
